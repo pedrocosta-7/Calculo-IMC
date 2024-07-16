@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --tt-heading: #0C3440;
+    --tt-label: #00453A;
+    --tt-input: #212529;
+    --ot-iput: #02799D;
+    --bd-input: rgba(73, 80, 87, 0.30);
+    --tt-placeholder: color: rgba(73, 80, 87, 0.50);
+    --bg-error: #F03E3E;
+    --tt-error: white;
+
+}
+body {
+    background-color: hsl(231, 80%, 8%);
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+.card {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    background: white;
+    max-width: 42.8rem;
+    margin: 0 auto;
+
+    border-radius: .6rem;
+    box-shadow: 0 0.2rem .4rem 0 rgba(0, 0, 0, 0.10);
+}
+.conteiner{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+.tytle {
+    color: #0C3440;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4rem; /* 125% */
+}
+form h1{
+    margin-bottom: 3.2rem;
+}
+form input{
+    width: 100%;
+
+    border-radius: .4rem;
+    border: 0.1rem solid rgba(73, 80, 87, 0.30);
+    background: #DCE2E9;
+    padding: 1.6rem;
+}
+form label {
+    color: var(--brand-green-hover, #00453A);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem; 
+    display: block;
+    margin-bottom: 0.8rem;
+}
+.inputWrapper + .inputWrapper {
+    margin-top: 0.16rem;
+}
+form input:focus {
+    outline: 0.15rem solid var(--ot-iput);
+}
+form input::placeholder {
+ color: var(--bd-input);
+} 
+form button{
+    display: flex;
+    height: 5.2rem;
+    padding: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3.2rem auto 0;
+
+    color: var(--NEUTRAL-White, #FFF);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+    background: var(--Brand-Colors-Explorer-mid, #02799D);
+    width: 30rem;
+    border: none;
+    gap: .8rem;
+    cursor: pointer;
+    transition: background 1.5s;
+}
+form button:hover{
+    background: var(--Brand-Colors-Explorer-mid, #016a8a);
+
+}
+.modalWrapper {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background: rgba(0, 0, 0, 0.70);
+
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.modalWrapper.open{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.modal{
+    position: relative;
+    
+    color: #0C3440;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 4rem; 
+
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+.modal button {
+    
+    background: none;
+    border: none;
+    top: .6rem;
+    right: .6rem;
+    position: absolute;
+
+    cursor: pointer;
+    transition: transform .2s;
+
+}
+.modal button:hover{
+   transform: scale(1.1);
+}
+.alert-error.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    
+
+}
+.alert-error{
+    position: absolute;
+    background: #F03E3E;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    padding: .8rem 0;
+    font-weight: bold;
+
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30rem);
+    transition: transform 3s;
+}
