@@ -141,8 +141,6 @@ form button:hover{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    
-
 }
 .alert-error{
     position: absolute;
@@ -160,6 +158,6 @@ form button:hover{
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-30rem);
-    transition: transform 3s;
+    transform: translateY(-3rem);
+    transition: transform 1.8s;
 }
